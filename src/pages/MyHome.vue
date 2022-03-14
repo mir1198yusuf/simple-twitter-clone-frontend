@@ -1,5 +1,5 @@
 <template>
-  <div class="m-10">
+  <div class="">
     <div class="flex flex-row align-middle justify-center">
       <input
         type="text"

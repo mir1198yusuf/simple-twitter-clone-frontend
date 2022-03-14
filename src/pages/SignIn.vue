@@ -45,6 +45,7 @@ export default {
         alert(`User logged in ✅`)
         // 🚨 storing jwt in session storage is not secure
         sessionStorage.jwt = response.data.jwt
+        sessionStorage.userId = response.data.userId
       } catch (error) {
         alert('Error logging user 😒')
       }
