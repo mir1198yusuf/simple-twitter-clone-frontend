@@ -38,6 +38,11 @@ var router = new VueRouter({
   routes: routes,
   mode: 'history'
 })
+router.beforeEach((to, from, next) => {
+  if (!sessionStorage.jwt && to.name !== 'signup') {
+    next({ name: 'signup' })
+  } else next()
+})
 
 // create vue app
 new Vue({
